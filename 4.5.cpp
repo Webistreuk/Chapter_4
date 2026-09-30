@@ -24,11 +24,21 @@ int main() {
 	std::cin >> start_number;
 	std::cout << "Введите конец диапозона ";
 	std::cin >> finish_number;
-	for (int i = start_number; i < finish_number; i++) {
-		std::cout << i;
-		std::cout << " ";
-		sum += i;
-	};
+
+	if (start_number > finish_number) {
+		for (int i = start_number; i >= finish_number; i--) {
+			std::cout << i;
+			std::cout << " ";
+			sum += i;
+		};
+	}
+	else {
+		for (int i = start_number; i <= finish_number; i++) {
+			std::cout << i;
+			std::cout << " ";
+			sum += i;
+		};
+	}
 	std::cout << "\nСумма ";
 	std::cout << sum;
 }
